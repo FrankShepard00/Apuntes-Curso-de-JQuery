@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery Tutorial</title>
+</head>
+<body>
+    <style>
+        .miClase{
+            color:red;
+        }
+    </style>
+     <ul>
+        <li>
+            <span>Primer texto</span>
+        </li>
+        <li>
+            Segundo texto
+        </li>
+        <li>
+            <span>Tercer texto</span>
+        </li>
+     </ul>
+    <script>
+        $(document).ready(function(){
+            $("ul").find("span").addClass("miClase");
+            var cantidadElementos = $("ul").find("span").length;
+            console.log("Existen "+ cantidadElementos + " elementos que tienen la etiqueta 'span'. ")
+        });
+
+    </script>
+</body>
+</html>

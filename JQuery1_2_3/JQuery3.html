@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>DOM  Eventos</title>
+</head>
+<body>
+    <style>
+        #p1{
+            background-color: red;
+            height: 60px;
+            width: 60px;
+            border: 2px solid black;
+            border-radius: 8px;
+            text-align: center;
+        }
+        #p2{
+            background-color: yellow;
+            height: 60px;
+            width: 60px;
+            border: 2px solid black;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+    <h4>Evento DobleClick</h4>
+    <p id="p1">Texto1</p>
+    <p id="p2">Texto2</p>
+    <script>
+        $(document).ready(function(){
+            $("#p1").dblclick(function(){
+                $(this).hide();
+            });
+            $("#p2").dblclick(function(){
+                alert("P2");
+            });
+        });
+    </script>
+
+</body>
+</html>

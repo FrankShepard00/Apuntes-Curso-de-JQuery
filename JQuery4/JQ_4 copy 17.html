@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery</title>
+</head>
+<body>
+    <style>
+        table{
+            border:1px solid #cccccc;
+            border-collapse: collapse;
+        }
+        .miClase{
+            background: #adc0c5;
+        }
+    </style>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Luis</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Mario</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Lucia</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Beto</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Frank</td>
+                <td>33</td>
+            </tr>
+        </table>
+
+    <script>
+        $(document).ready(function(){
+            var cantidadDeFilas = $("table tr").length;
+            for(var i = 1; i < cantidadDeFilas; i += 2){
+                console.log(i);
+                $("table tr:eq("+i+")").addClass("miClase");
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

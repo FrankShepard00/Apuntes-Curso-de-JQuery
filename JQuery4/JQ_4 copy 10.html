@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery</title>
+</head>
+<body>
+    <style>
+        #caja{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+        <button>Click</button><br/><br/>
+        <div id="caja"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $('#caja').delay(3000).fadeOut(1000);
+            });
+        });
+    </script>
+    
+</body>
+</html>

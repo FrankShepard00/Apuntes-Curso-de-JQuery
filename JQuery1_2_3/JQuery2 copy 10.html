@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos del  DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+   <style>
+    #p1{
+        background-color: green;
+        padding: 5px;
+    }
+    .miClase{
+        font-size: 25px;
+        padding:5px ;
+    }
+   </style>
+   <h3>Método "removeAttr"</h3>
+   <p id="p1" class="miClase">Primer parrafo</p>
+
+   <button id="removerAtributos">Remover atributos</button>
+   <button id="removerClase">Remover clase</button>
+   <button id="removerClaseAtributos">Remover atributos y clase</button>
+
+   
+   
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#removerAtributos").click(function(){
+                $("p").removeAttr("id");
+            });
+
+            $("#removerClase").click(function(){
+                $("p").removeAttr("class");
+            });
+
+            $("#removerClaseAtributos").click(function(){
+                $("p").removeAttr("id class");
+            });  
+        });
+        
+
+    </script>
+</body>
+</html>

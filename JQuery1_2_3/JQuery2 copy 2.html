@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos del  DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        #caja{
+            height: 120px;
+            width:100px;
+            border: 1px solid blue;
+            background-color: orange;
+        }
+    </style>
+    <h1>Attr parte-1</h1>
+
+    Nombre<input type="text" id="miId" value="nombre"/><br/>
+    Email<input type="email" id="miId2" value="nombre2"/>
+    <br/>
+    <div id="info"></div>
+    <br/>
+    <button id="button_type">Atributo type</button>
+    <button id="button_id">Agritubo id</button>
+    
+
+    
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $("#button_type").click(function(){
+                $("input[type='text']").attr("id", "codigo"); 
+            });
+        });
+
+        $(document).ready(function(){
+            $("#button_id").click(function(){
+                $("input[type='email']").attr("id", "codigo2");
+            });
+        });
+
+    </script>
+</body>
+</html>

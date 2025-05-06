@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>DOM  Eventos</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <h4>Evento Keydown</h4>
+    <form>
+        <p>Nombre: <input type="text"/></p>
+        <p>Email: <input type="email"/></p>
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("input[type='text']").keydown(function(){
+                $(this).css("background-color","yellow")
+            });
+            $("input[type='email']").keydown(function(){
+                $(this).css("background-color","yellow")
+            });
+
+        });
+    </script>
+
+</body>
+</html>

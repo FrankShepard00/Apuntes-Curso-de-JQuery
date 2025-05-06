@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery Tutorial</title>
+</head>
+<body>
+    <style>
+
+    </style>
+     <ul>
+        <li>Texto 1</li>
+        <li>Texto2</li>
+        <li>Texto3
+            <ul>
+                <li>uno</li>
+                <li>dos</li>
+                <li>
+                    <span>Este es un texto</span>
+                </li>
+            </ul>
+        </li>
+     </ul>
+    <script>
+        $(document).ready(function(){
+            $("span").closest("ul").css("background", "yellow");
+        });
+    </script>
+</body>
+</html>

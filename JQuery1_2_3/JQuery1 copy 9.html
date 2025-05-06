@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos del  DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        #caja{
+            height: 120px;
+            width:100px;
+            border: 1px solid blue;
+            background-color: orange;
+        }
+    </style>
+    <h1>Métodos "width y height"</h1>
+    <div id="caja"></div>
+    <div id="detalles"></div>
+    <button>Mostrar Dimensiones</button>
+
+    
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                var texto = "";
+                texto += $("#caja").width() + "px" + "<br/>";
+                texto += $("#caja").height() + "px"; 
+                $("#detalles").html(texto); 
+            });
+        });
+
+    </script>
+</body>
+</html>

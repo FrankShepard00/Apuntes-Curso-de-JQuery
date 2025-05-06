@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>DOM Eventos</title>
+</head>
+<body>
+    <style>
+        .miClase{
+            background-color: whitesmoke;
+        } 
+    </style>
+    <h4>Eventos "focusin y focusout"</h4>
+    <p>Nombre: <input type="text" id="nombre"/><span id="id1"></span></p>  
+    <script>
+        $(document).ready(function(){
+            $("#nombre").focusin(function(){
+                $(this).addClass("miClase")
+                $("#id1").html(" Ingrese su nombre");
+            });
+            $("#nombre").focusout(function(){
+                $("#id1").html("");
+                $(this).removeClass("miClase"); 
+            });
+        });
+    </script>
+</body>
+
+</html>

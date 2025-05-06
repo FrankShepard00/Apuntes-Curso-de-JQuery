@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery Tutorial</title>
+</head>
+<body>
+    <style>
+
+    </style>
+     <ul class="personas">
+        <li>Beto</li>
+        <li>Luis</li>
+        <li>Manuel</li>
+        <li>Carmen</li>
+     </ul>
+    <script>
+        $(document).ready(function(){
+            $(".personas li:first").append(" (Nuevo texto)"); 
+            $(".personas").find("li").first().append(" (primero)"); 
+            $(".personas").find("li").first().css("color","red");
+            $(".personas").find("li").first().nextAll().css("color","red");
+            $(".personas").find("li").first().next().css("color","green");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery</title>
+</head>
+<body>
+    <style>
+        
+    </style>
+        <button id="b1">Botón 1</button>
+        <button id="b2">Botón 2</button>
+        <button id="b3">Botón 3</button>
+        <br/>
+        <p id="p1">Primer parrafo.</p>
+        <p id="p2">Segundo parrafo.</p>
+        <p id="p3">Tercer parrafo.</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#p1").fadeToggle("slow");
+            });
+            $("#b2").click(function(){
+                $("#p2").fadeToggle("fast");
+            });
+            $("#b3").click(function(){
+                $("#p3").fadeToggle(3000);
+            });
+        });
+
+    </script>
+    
+</body>
+</html>

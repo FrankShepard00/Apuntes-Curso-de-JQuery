@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Jquery</title>
+</head>
+<body>
+    <p id="contenido">Este es un texto</p>
+    <button id="visibilidad">Hacer Click</button>
+    <script>
+        $(document).ready(function(){
+           $("#visibilidad").click(function(){
+                $("#contenido").toggle(); 
+                var x = $("#contenido").is(':visible');
+                $("#visibilidad").text(x === true ? "Ocultar": "Mostrar");
+                var mensaje = (x === true) ? "Si es visible":"No es visible";
+                console.log(mensaje);
+           });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos del  DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        #caja{
+            height: 120px;
+            width:100px;
+            border: 1px solid blue;
+            background-color: orange;
+        }
+    </style>
+    <h1>Attr parte-1</h1>
+
+    Nombre<input type="text" id="miId" value="nombre"/>
+    <br/>
+    <div id="info"></div>
+    <br/>
+    <button id="atrr_type">Atributo type</button>
+    <button id="atrr_id">Agritubo id</button>
+    
+
+    
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $("#atrr_type").click(function(){
+                var x = "El valor del atributo es: " + $("input").attr("type"); 
+                $("#info").html(x); 
+            });
+        });
+
+        $(document).ready(function(){
+            $("#atrr_id").click(function(){
+                var x = "El valor del atributo es: " + $("input").attr("id"); 
+                $("#info").html(x); 
+            });
+        });
+
+    </script>
+</body>
+</html>

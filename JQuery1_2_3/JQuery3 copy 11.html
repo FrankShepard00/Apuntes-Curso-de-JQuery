@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>DOM Eventos</title>
+</head>
+<body>
+    <style>
+        .caja{
+            display: inline;
+            height: 300px;
+            width: 200px;
+            padding: 10px 10px;
+            background-color: black;
+        }
+    </style>
+    <h4>Eventos "focusin y focusout"</h4>
+    <p>Nombre: <input type="text" id="nombre"/><span id="id1"></span></p>
+    <script>
+        $(document).ready(function(){
+            $("#nombre").focusin(function(){
+                $("#id1").html(" Ingrese su nombre");
+            });
+
+            $("#nombre").focusout(function(){
+                $("#id1").html("");
+            });
+        });
+    </script>
+</body>
+
+</html>

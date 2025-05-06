@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery</title>
+</head>
+<body>
+    <style>
+
+    </style>
+        <p>Buscar usuario: <input type="text"></p>
+        <div id="info"></div>
+
+    <script>
+        $(document).ready(function(){
+            var nombres = ['Beto', 'Luis', 'Mario', 'Lucia', 'Alfonso', 'Esteban'];
+            $('input').keyup(function(){
+                var nombre = $(this).val();
+                if($.inArray(nombre, nombres) !== -1){
+                    $("#info").text(nombre + " fue encontrado");
+                }else{
+                    $("#info").text(); 
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

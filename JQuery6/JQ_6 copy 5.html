@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery Tutorial</title>
+</head>
+<body > 
+    <style>
+        .descendientes *{
+            display: block;
+            border: 2px solid;
+            color: #cccccc;
+            padding: 5px;
+            margin: 10px;
+        }
+        .miClase{
+            color: red;
+        }
+    </style>
+    <div class="descendientes">
+        <div>div (abuelo)
+            <ul>ul (padre)
+                <li>li (hijo 1)
+                    <span>span (nieto)</span>
+                </li>
+                <li>li (hijo 2)
+                    <span>span (nieto)</span>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+   
+     
+    <script>
+        $(document).ready(function(){
+            $("ul").children().addClass("miClase");
+            console.log($("ul").children().length);
+        });
+    </script>
+</body>
+</html>

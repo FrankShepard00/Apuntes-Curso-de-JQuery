@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery Tutorial</title>
+</head>
+<body>
+    <style>
+
+    </style>
+          <ul>
+            <li>Beto</li>
+            <li>Luis</li>
+            <li>Carmen</li>
+            <li>Miguel</li>
+            <li>Teresa</li>
+            <li>Elizabeth</li>
+         </ul>
+    <script>
+        $(document).ready(function(){
+            $("ul li").filter(function(index){
+                return index === 2 || index === 4; 
+            }).css("background-color", "yellow")
+            .append(" (Nuevo texto)");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos del  DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Selector "list"</h1>
+    <p id="texto">Lista 1</p>
+    <ul>
+        <li>Rojo</li>
+        <li>azul</li>
+        <li>verde</li>
+    </ul>
+    <ul>
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+    </ul>
+    <button id="primero">Primero</button>
+    <button id="primeroAmbas">El primero de ambas</button>
+    <button id="ultimoAmbas">El último de ambas</button>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#primero").click(function(){
+                $("ul li:first").hide(1000).show(1000);
+            }); 
+
+            $("#primeroAmbas").click(function(){
+                $("ul li:first-child").hide(1000).show(1000);
+
+            });
+            $("#ultimoAmbas").click(function(){
+                $("ul li:last-child").hide(1000).show(1000);
+
+            });
+        });
+
+
+    </script>
+</body>
+</html>

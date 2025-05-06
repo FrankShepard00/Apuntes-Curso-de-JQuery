@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery Tutorial</title>
+</head>
+<body>
+    <style>
+
+    </style>
+     <ul class="list1">
+        <li class="primera-clase">Texto 1</li>
+        <li class="segunda-clase">Texto 2
+            <ul class="lista2">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li> 
+        <li class="tercera-clase">Texto 3</li>
+     </ul>
+    <script>
+        $(document).ready(function(){
+            $(".tercera-clase").closest("ul").find("li").first().css("color", "blue");
+            $(".tercera-clase").closest("ul").find("li").first().next().children().css("color", "red");
+        });
+    </script>
+</body>
+</html>

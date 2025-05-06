@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery</title>
+</head>
+<body>
+    <style>
+        p{
+            position: relative;
+            width: 400px;
+            height: 90px;
+            margin-left: 40px;
+            padding-top: 40px;
+        }
+        div{
+            position: absolute;
+            display: none;
+            width: 420px;
+            height: 60px;
+            font-size: 30px;
+            text-align: center;
+            color: yellow;
+            background: #000000;
+            margin-left: 40px;
+            padding-top: 40px;
+            top: 50px;
+            left: 0;
+        }
+        span{
+            display: none;
+        }
+    </style>
+        <button id="boton1">Ocultar</button>
+        <button id="boton2">Mostrar</button>
+        <p>
+            Este es un simple texto.
+            <div>
+                <span>Mensaje oculto</span>
+            </div>
+        </p>
+    <script>
+        $(document).ready(function(){
+           $("#boton1").click(function(){
+            $("div").fadeIn(3000, function(){
+                $("span").fadeIn(1000);
+            });
+           });
+           $("#boton2").click(function(){
+            $("div").fadeOut(3000, function(){
+                $("span").fadeOut(1000);
+            });
+           });
+        });
+
+    </script>
+    
+</body>
+</html>

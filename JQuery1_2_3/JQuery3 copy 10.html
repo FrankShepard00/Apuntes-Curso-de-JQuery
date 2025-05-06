@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>DOM Eventos</title>
+</head>
+<body>
+    <style>
+        .caja{
+            display: inline;
+            height: 300px;
+            width: 200px;
+            padding: 10px 10px;
+            background-color: black;
+        }
+    </style>
+    <h4>Evento "hover"</h4>
+    <div id="container">
+        <div class="caja">1</div>
+        <div class="caja">2</div>
+        <div class="caja">3</div>
+        <div class="caja">4</div>
+        <div class="caja">5</div>
+    </div>
+    <p id="info"></p>
+    <script>
+        $(document).ready(function(){
+            var parent = $("#container"); 
+            var divs = parent.children();
+
+            parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+            $(".caja").hover(function(){
+                if($(this).text() === "3"){
+                    $("#info").html("Ganaste!");
+                }
+                $(this).css("background-color","yellow")
+            })
+        });
+    </script>
+</body>
+
+</html>

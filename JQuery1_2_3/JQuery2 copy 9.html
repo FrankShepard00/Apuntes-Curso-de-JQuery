@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos del  DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+   <style>
+    .nuevaClase{
+        color:blue
+    }
+    .miClase{
+        background-color: green;
+        text-align: center;
+        width: 100px;
+        height: 60px;
+        font-size: 20px;
+    }
+   </style>
+   <h3>Método "RemoveClass"</h3>
+   
+   <div id="caja">caja</div>
+   <button id="add">add</button>
+    <button id="remove">remove</button>
+   
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+           $("#add").click(function(){
+            $("#caja").addClass("miClase")
+           })
+
+           $("#remove").click(function(){
+            $("#caja").removeClass("miClase");
+           });
+        });
+
+    </script>
+</body>
+</html>

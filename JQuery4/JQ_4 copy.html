@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery Tutorial</title>
+</head>
+<body>
+    <style>
+        #caja{
+            display: none;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border: 2px solid black;
+            margin: 100px;
+        }
+    </style>
+    <button id="boton1">Hazme Click</button>
+    <div id="caja"></div>
+    <script>
+        $(document).ready(function(){
+            $("#boton1").click(function(){
+                $("#caja").slideDown(4000, function(){
+                    $(this).css("background-color", "black"); 
+                });
+            });
+        });
+    </script>
+</body>
+</html>

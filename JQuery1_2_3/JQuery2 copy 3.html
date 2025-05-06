@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos del  DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+   <style>
+        #p1{
+            background-color: red;
+        }
+        #p2{
+            background-color: blue;
+        }
+        #p3{
+            background-color: green;
+        }
+        #p4{
+            background-color: yellow;
+        }
+        #p5{
+            background-color: orange;
+        }
+   </style>
+
+   <p>Primero</p>
+   <p>Segundo</p>
+   <p>Tercero</p>
+   <p>Cuarto</p>
+   <p>Quinto</p>
+
+   <button id="button">Cambiar color</button>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            $("#button").click(function(){
+                $("p").attr("id", function(index){
+                    return "p" + (index + 1);
+                });
+            });
+
+        });
+
+    </script>
+</body>
+</html>

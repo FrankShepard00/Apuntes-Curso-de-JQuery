@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos del  DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    </script>
+
+</head>
+<body>
+    
+    <div id="Texto1">Texto1</div>
+    <div id="Texto2">Texto2</div>
+    <div id="Texto3">Texto3</div>
+    <button>Click</button>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('button').click(function(){
+                $("#Texto2").hide();
+            });
+        });
+
+
+    </script>
+</body>
+</html>

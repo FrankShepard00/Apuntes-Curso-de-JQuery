@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery Tutorial</title>
+</head>
+<body>
+    <style>
+        .miClase{
+            color:red;
+            border: 1px solid red;
+        }
+    </style>
+    <div>Esto es un texto</div>
+    <p>Este es un parrafo</p>
+    <hr>
+    <div>
+        <p>parrafo</p>
+        <span>etiqueta span</span>
+        <h2>etiqueta h2</h2>
+        <h3>etiqueta h3</h3>
+        <p>otro parrafo</p>
+    </div>
+     
+    <script>
+        $(document).ready(function(){
+            $("h2").siblings("p").addClass("miClase"); 
+        });
+    </script>
+</body>
+</html>

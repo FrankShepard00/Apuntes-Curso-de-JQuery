@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos del  DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Selector "even y odd"</h1>
+    <table border = '1'>
+        <tr>
+            <td>Mario</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Beto</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Luis</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Miguel</td>
+            <td>27</td>
+        </tr>
+
+    </table>
+
+    
+
+
+    <script type="text/javascript">
+
+        $(Document).ready(function(){
+            $("tr:even").css("background-color","yellow"); //inpares
+            $("tr:odd").css("background-color","red"); //pares
+        });
+
+    </script>
+</body>
+</html>

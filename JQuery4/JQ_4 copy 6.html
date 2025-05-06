@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Jquery</title>
+</head>
+<body>
+    <style>
+        #caja{
+            display: none;
+            height: 600px;
+            width: 400px;
+            background-color: red;
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+        <button id="boton">Iniciar</button>
+        <button id="boton1">Detener</button>
+        <div id="caja"></div>
+        <div id="info"></div>
+    <script>
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                $("#caja").slideDown(6000, function(){
+                    var alto = $("#caja").height();
+                    alert("Punto final: " + alto);
+                
+                });
+                $("#boton1").click(function(){
+                    $("#caja").stop();
+                    var alto = $("#caja").height().toPrecision(3);
+                    $("#info").text(alto + "px");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

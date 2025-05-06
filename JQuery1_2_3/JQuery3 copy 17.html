@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>DOM Eventos</title>
+</head>
+<body>
+    <style>
+       
+    </style>
+    <h4>Eventos "change"</h4>
+    <select name = "transporte">
+        <option>Carro</option>
+        <option>Avion</option>
+        <option>Barco</option>
+        <option>Bus</option>
+    </select>
+    <div id="info"></div>
+    <script>
+        $(document).ready(function(){
+            $("select[name='transporte']").change(function(){
+                $("#info").html("Escogiste: "+ $("select[name='transporte']").val());
+            })
+        });
+    </script>
+</body>
+
+</html>

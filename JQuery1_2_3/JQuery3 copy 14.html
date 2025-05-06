@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>DOM Eventos</title>
+</head>
+<body>
+    <style>
+        .miClase{
+            background-color: yellow;
+        }
+        ul{
+            list-style: none;
+            padding: 0%;
+        } 
+    </style>
+    <h4>Eventos "contains 2"</h4>
+    <input type="text" id="buscador" placeholder="Buscar persona"/>
+    <ul id="nombres">
+        <li>Henry Granados</li>
+        <li>Miguel Suarez</li>
+        <li>Luis Gonzales</li>
+        <li>Henry Salazar</li>
+        <li>Michael Gomez</li>
+        <li>Henry Ruiz</li>
+        <li>Luis Cortijo</li> 
+        <li>Antonio Perez</li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            $("#buscador").keyup(function(){
+                var persona = $("#buscador").val();
+            if($.trim(persona) != ""){
+               $("#nombres li:contains('"+persona+"')").addClass("miClase");
+            } else{
+                $("#nombres li").removeClass("miClase");
+            }
+            });
+         });
+    </script>
+</body>
+
+</html>

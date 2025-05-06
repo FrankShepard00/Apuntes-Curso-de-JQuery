@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JQuery Tutorial</title>
+</head>
+<body>
+    <style>
+        .miClase{
+            background-color: red;
+        }
+    </style>
+     <div class="miClase">Uno </div>
+     <div>Dos </div>
+     <div class="miClase">Tres </div>
+     <div>Cuatro </div>
+     <div class="miClase">Cinco </div>
+
+     <ul>
+        <li>Beto</li>
+        <li>Luis</li>
+        <li>Carmen</li>
+        <li>Miguel</li>
+        <li>Teresa</li>
+        <li>Elizabeth</li>
+     </ul>
+    <script>
+        $(document).ready(function(){
+            var numeros = $("div").filter(".miClase").text();
+            console.log(numeros);
+
+            $("li").filter(":even").css("background-color", "yellow");
+        });
+    </script>
+</body>
+</html>
