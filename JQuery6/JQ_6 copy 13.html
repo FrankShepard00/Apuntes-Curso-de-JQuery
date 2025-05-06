@@ -8,12 +8,31 @@
 </head>
 <body>
     <style>
-
+        .seleccionado{
+            border: 3px solid red;
+        }
     </style>
-     
+     <div class="imagen-principal">
+        <img src="images\images.png" height="100px">
+        <img src="images\jquery-manual.jpg" height="100px">
+        <img src="images\phyton-int.jpg" alt="" height="100px">
+     </div>
+     <div class="otras-imagenes">
+        <img src="images\images.png" height="100px">
+        <img src="images\jquery-manual.jpg" height="100px">
+        <img src="images\phyton-int.jpg" alt="" height="100px">
+     </div>
     <script>
         $(document).ready(function(){
-    
+            var imagenes = $(".otras-imagenes img");
+            imagenes.eq(0).addClass('seleccionado'); 
+            $('.imagen-principal img:eq(0)').nextAll().hide() 
+            imagenes.click(function(){
+                var indice = $(this).index();
+                imagenes.removeClass('seleccionado'); 
+                imagenes.eq(indice).addClass("seleccionado");
+                $('.imagen-principal img').eq(indice).show().siblings().hide()
+            });
         });
     </script>
 </body>

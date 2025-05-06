@@ -33,7 +33,15 @@
      </ul>
     <script>
         $(document).ready(function(){
-    
+            $(".menu").find("li").first().nextAll().hide();
+            $(".menu").mouseenter(function(){
+                if($(".menu li:last").is(":hidden")){
+                    $(this).find("li").first().nextAll().show();
+                }
+            });
+            $(".menu").mouseleave(function(){
+                $(this).find("li").first().nextAll().hide();
+            });
         });
     </script>
 </body>
