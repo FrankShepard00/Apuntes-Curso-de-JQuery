@@ -17,7 +17,13 @@
             border: 2px solid green;
         }
         #caja{
-            
+            top: 50px;
+            left: 122px;
+            width: 60px;
+            height: 60px;
+            background-color: red;
+            position: absolute;
+            display: none;
         }
     </style>
      <button id="activarEvento">Agregar Evento</button>
@@ -26,7 +32,19 @@
      <div id="caja"></div>
     <script>
         $(document).ready(function(){
-    
+            function miFuncion(){
+                $("#caja").slideToggle();
+            }
+
+            $("#activarEvento").click(function(){
+                $("body").find("#boton").addClass("activo");
+                $("body").on("click", "#boton", miFuncion).find("#boton").text("Activado");
+            });
+            $("#desactivarEvento").click(function(){
+                $("body").find("#boton").removeClass("activo");
+                $("body").off("click", "#boton", miFuncion).find("#boton").text("Desactivado");
+            });
+
         });
     </script>
 </body>
