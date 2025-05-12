@@ -8,12 +8,37 @@
 </head>
 <body>
     <style>
-
+        .miClase {
+            background: yellow;
+        }
     </style>
-     
+    <p>Este es un párrafo</p>
+    <button id="toggleEvent">Remover/Agregar evento</button>
+    
     <script>
         $(document).ready(function(){
-    
+            // Función para alternar la clase
+            function toggleClass() {
+                $("p").toggleClass("miClase");
+            }
+            
+            // Variable para rastrear si el evento está activo
+            let eventActive = true;
+            
+            // Agregar evento click inicial al párrafo
+            $("p").on("click", toggleClass);
+            
+            // Evento para el botón
+            $("#toggleEvent").on("click", function(){
+                if(eventActive) {
+                    $("p").off("click");
+                    $(this).text("Agregar evento");
+                } else {
+                    $("p").on("click", toggleClass);
+                    $(this).text("Remover evento");
+                }
+                eventActive = !eventActive;
+            });
         });
     </script>
 </body>

@@ -5,16 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>JQuery Tutorial</title>
+    <style>
+        .flecha {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-    <style>
 
-    </style>
-     
+    <button class="flecha up">&uarr;</button>
+    <button class="flecha down">&darr;</button>
+    
+    <p id="texto">Este es un texto</p>
+
     <script>
         $(document).ready(function(){
-    
+            $("#texto").hide();
+            $(".down").hide();
+
+            $(".up").click(function(){
+                $("#texto").slideDown();   
+                $(".up").hide();         
+                $(".down").show();        
+            });
+
+            $(".down").click(function(){
+                $("#texto").slideUp();  
+                $(".down").hide();        
+                $(".up").show();           
+            });
         });
     </script>
+
 </body>
 </html>

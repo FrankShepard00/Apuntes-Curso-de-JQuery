@@ -10,10 +10,20 @@
     <style>
 
     </style>
-     
+     <ul>
+        <li>Beto</li>
+        <li>Luis</li>
+        <li>Mario</li>
+        <li>Esteban</li>
+     </ul>
+
+     <p>Los <span>colores</span> primarios</p>
+     <p>Curso de <span>programación</span>.</p>
+     <p>Aprende JQuery desde cero.</p>
     <script>
         $(document).ready(function(){
-    
+            $("ul").has("li").css("color", "blue");
+            $("p").has("span").css("background", "red" );
         });
     </script>
 </body>

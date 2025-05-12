@@ -8,12 +8,22 @@
 </head>
 <body>
     <style>
-
+        .red {
+            color:red;
+        }
+        .green {
+            color:green;
+        }
     </style>
-     
+     <p class="red">Este es el primer texto</p>
+     <p class="green">Este es el segundo texto</p>
+
+     <div id="info1"></div>
+     <div id="info2"></div>
     <script>
         $(document).ready(function(){
-    
+            $("#info1").text($("p:eq(0)").hasClass("red"));
+            $("#info2").text($("p:eq(1)").hasClass("red"));
         });
     </script>
 </body>
