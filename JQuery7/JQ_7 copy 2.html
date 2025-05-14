@@ -10,9 +10,21 @@
     <style> 
 
     </style>
-    
+        <button>Click</button>
+        <div id="info"></div>
     <script>
-        
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get("Documentos/JQ_7 copy 2.json", function(datos){
+                    console.log(datos)
+                    if($("#info").is(":empty")){
+                        $.each(datos, function(index, obj){
+                        $("#info").append(obj.nombre + " " + obj.apellido + "<br/>");
+                        });
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>

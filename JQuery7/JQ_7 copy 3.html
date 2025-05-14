@@ -10,9 +10,21 @@
     <style> 
 
     </style>
-    
-    <script>
+    <button>Mostrar Empleados</button>
+    <ul>
         
+    </ul>
+    <script>
+        $("button").click(function(){
+            $.getJSON("Documentos/JQ_7 copy 3.json", function(datos){
+                console.log(datos);
+                    if($("ul").children().length === 0){
+                        $.each(datos.empleados, function(index, obj){
+                        $("ul").append("<li>" + obj.nombre + " : " + obj.salario + "</li>");
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>

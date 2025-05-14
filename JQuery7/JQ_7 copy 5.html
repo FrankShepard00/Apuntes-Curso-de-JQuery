@@ -7,12 +7,31 @@
     <title>JQuery 7</title>
 </head>
 <body>
-    <style> 
 
-    </style>
-    
+    <button>Click</button>
+    <div id="info"></div>
     <script>
-        
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({
+                    url: "Documentos/JQ_7 copy 5.json", 
+                    type: "GET",
+                    dataType: "json", 
+                    success: function(datos){
+                        console.log(datos);
+                        $.each(datos, function(index, obj){
+                            $("#info").append(obj.nombre + " " + obj.apellido + "</br>")
+                        });
+                    }, 
+                    error: function(xhr, status, error){
+                        console.log(xhr); 
+                        console.log(status);
+                        console.log(error);
+                    }
+
+                });
+            });
+        });
     </script>
 </body>
 </html>

@@ -7,12 +7,28 @@
     <title>JQuery 7</title>
 </head>
 <body>
-    <style> 
 
-    </style>
-    
+    <button>El menor</button>
+    <div id="info"></div>
     <script>
-        
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.getJSON("Documentos/JQ_7 copy 4.json", function(datos){
+                    var personas = [];
+                    var edadMenor;
+                    $.each(datos, function(index, obj){
+                        personas.push(obj.edad);
+                        edadMenor = personas[0];
+                        $.each(personas, function(index, edad){
+                            if(edad < edadMenor){
+                                edadMenor = edad; 
+                            }
+                        });
+                    });
+                    $("#info").text("La edad menor es: "+ edadMenor);
+                });
+            });
+        });
     </script>
 </body>
 </html>

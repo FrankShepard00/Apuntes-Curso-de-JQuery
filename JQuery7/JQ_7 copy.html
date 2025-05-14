@@ -7,12 +7,18 @@
     <title>JQuery 7</title>
 </head>
 <body>
-    <style> 
+        <button>Click</button>
+        <div id="info"></div>
 
-    </style>
-    
     <script>
-        
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get('Documentos/JQ_7 copy.json', function(datos){
+                    console.log(datos);
+                    $("#info").text(datos.nombre + " " + datos.apellido);
+                })
+            });
+        });
     </script>
 </body>
 </html>
