@@ -7,11 +7,21 @@
     <title>JQuery 7</title>
 </head>
 <body>
-    <style> 
+    <button>Click</button>
+    <input type="text" id="nombre">
+    <div id="info"></div>
 
-    </style>
-    
+
     <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var usuario = $("#nombre").val();
+                $.get("servidor.php", {nombre:usuario}, function(respuesta){
+                    $("#info").text(respuesta);
+                });
+            });
+        });
+
         
     </script>
 </body>

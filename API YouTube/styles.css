@@ -1,0 +1,36 @@
+.logo-container{
+    text-align: center;
+    padding: 25px 0px ;
+    font-weight: 700;
+}
+.logo{
+    color: #ffffff;
+    background: #e3051b;
+    border: #cccccc 1px solid;
+    border-radius: 10px;
+    padding: 8px 15px;
+}
+
+#listaDeVideos{
+    padding: 10px 0;
+    border-bottom: 3px solid #ccc;
+    list-style: none;
+    overflow: auto;
+}
+
+.lista-izquierda{
+    float: left;
+    width: 20%;
+}
+
+.lista-izquierda img{
+    width: 100%;
+    padding: 4px;
+    border: solid #cccccc 1px;
+    cursor: pointer;
+}
+
+.lista-derecha{
+    float: right;
+    width: 78%;
+}
